@@ -10,7 +10,7 @@ This repository contains the ROS package for AirOU's Smart Intersection.
 
 -   vehicle/
     -   Contains all the code (ROS nodes) for a car to communicate with Smart Infrastructure
-    -   Targets the (mushr.io)[https://mushr.io/] vehicle platform.
+    -   Targets the [mushr.io](https://mushr.io/) vehicle platform.
 -   infrastructure/
     -   Contains all the code (ROS nodes) for a smart intersection to communicate with cars
     -   Targets Nvidia Jetson Orin Nano single-board computer with Velodyne Puck 3D lidar.
