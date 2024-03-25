@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>smart_intersection</name>
-  <version>0.0.0</version>
-  <description>The smart_intersection package</description>
+  <version>0.0.1</version>
+  <description>A proof-of-concept for a smart intersection which supports traffic management utilizing SLAM.</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="robot@todo.todo">robot</maintainer>
+  <maintainer email="tyler.m.roman-1@ou.edu">Tyler Roman</maintainer>
+  <maintainer email="matthewcarroll@ou.edu">Matthew Carroll</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>MIT</license>
 
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
