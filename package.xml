@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>smart_intersection</name>
+  <name>smart_infrastructure</name>
   <version>0.0.1</version>
   <description>A proof-of-concept for a smart intersection which supports traffic management utilizing SLAM.</description>
 

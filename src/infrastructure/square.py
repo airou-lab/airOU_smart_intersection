@@ -31,4 +31,4 @@ if __name__ == "__main__":
     # Example usage:
     corner1 = (1, -2)
     corner2 = (1, -3)
-    print(find_other_corners(corner1, corner2))
+    print("other corners: ", find_other_corners(corner1, corner2))
