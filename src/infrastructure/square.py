@@ -4,10 +4,10 @@ def find_other_corners(corner1, corner3):
 
     Parameters:
     - corner1: Tuple representing the coordinates of one corner (x1, y1)
-    - corner2: Tuple representing the coordinates of the opposite corner (x2, y2)
+    - corner3: Tuple representing the coordinates of the opposite corner (x3, y3)
 
     Returns:
-    - List containing coordinates of the other two corners [(x3, y3), (x4, y4)]
+    - List containing coordinates of the other two corners [(x2, y2), (x4, y4)]
     """
     x1, y1 = corner1
     x3, y3 = corner3
