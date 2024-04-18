@@ -13,17 +13,17 @@ def find_other_corners(corner1, corner3):
     x3, y3 = corner3
 
     # Find the midpoint between the two corners
-    midpoint = ((x1 + x3) / 2, (y1 + y3) / 2)
+    center = ((x1 + x3) / 2, (y1 + y3) / 2)
 
     # Find the vector from the center to one corner
-    radius = [(midpoint[0] - x1), (midpoint[1] - y1)]
+    radius = [(center[0] - x1), (center[1] - y1)]
 
     # Calculate the coordinates of the other corners using symmetry
-    x2 = midpoint[0] - radius[1]
-    y2 = midpoint[1] + radius[0]
+    x2 = center[0] - radius[1]
+    y2 = center[1] + radius[0]
 
-    x4 = midpoint[0] + radius[1]
-    y4 = midpoint[1] - radius[0]
+    x4 = center[0] + radius[1]
+    y4 = center[1] - radius[0]
 
     return [(x2,y2), (x4, y4)]
 
