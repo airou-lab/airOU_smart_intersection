@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/airlab/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/airlab/catkin_ws/src/multiple-object-tracking-lidar/include/**",
+        "/home/airlab/catkin_ws/src/object_detection_tracking/src/object_detection/include/**",
+        "/home/airlab/catkin_ws/src/velodyne/velodyne_driver/include/**",
+        "/home/airlab/catkin_ws/src/velodyne/velodyne_laserscan/include/**",
+        "/home/airlab/catkin_ws/src/velodyne/velodyne_pcl/include/**",
+        "/home/airlab/catkin_ws/src/velodyne/velodyne_pointcloud/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

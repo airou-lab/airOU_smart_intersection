@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/airlab/catkin_ws/src/smart-intersection/install/setup.sh
