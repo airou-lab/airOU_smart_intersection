@@ -2,11 +2,7 @@
 	<!-- Set locations for different devices/features in infrastructure -->
 	<param name="/smart_infrastructure/static_positions" type="yaml" textfile="$(find smart_infrastructure)/config/static_positions.yaml"/>	
 
-	<!-- Start various devices that are apart of infrastructure -->
-
 	<!-- Start the decider -->
 	<!-- The decider communicates important information to vehicles -->
 	<node pkg="smart_infrastructure" name="decider" type="decider.py" output="screen"/>
-
-	
 </launch>

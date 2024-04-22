@@ -1,0 +1,16 @@
+<launch>
+    <arg name="master_uri" default="http://10.42.0.1:11311" />
+    <param name="ROS_MASTER_URI" value="$(arg master_uri)" />
+
+    <machine name="orin" address="10.42.0.1" user="airlab" password="AirlabOU" default="true"/>
+    <machine name="arc2" address="10.42.0.12" user="robot" password="prl_robot"/>
+
+    <include file="$(find mushr_base)/launch/teleop.launch" />
+    <include file="$(find mushr_base)/launch/includes/map_server.launch" />
+
+    <include  file="$(find mushr_pf)/launch/real.launch" />
+    <include file="$(find mushr_rhc)/launch/real.launch" />
+    <include  file="$(find mushr_gp)/launch/real.launch" />
+
+    <include file="$(find smart_infrastructure)/launch/includes/decider.launch" />	
+</launch>
