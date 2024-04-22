@@ -1,0 +1,11 @@
+<launch>
+    <!-- Setup environment variables and machines -->
+    <include file="$(find smart_infrastructure)/launch/includes/setup.launch" />
+
+    <!-- Set ROS_IP for the ARC 2 -->
+    <arg name="ros_ip" default="10.42.0.1" />
+    <param name="ROS_IP" value="$(arg ros_ip)" />
+
+    <!-- Start Decider node -->
+    <include file="$(find smart_infrastructure)/launch/includes/decider.launch" />	
+</launch>

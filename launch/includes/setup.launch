@@ -1,0 +1,9 @@
+<launch>
+    <!-- Set ROS_MASTER URI -->
+    <arg name="master_uri" default="http://10.42.0.1:11311" />
+    <param name="ROS_MASTER_URI" value="$(arg master_uri)" />
+
+    <!-- Define robotic agents in system -->
+    <machine name="orin" address="10.42.0.1" user="airlab" password="AirlabOU" default="true"/>
+    <machine name="arc2" address="10.42.0.12" user="robot" password="prl_robot"/>
+</launch>

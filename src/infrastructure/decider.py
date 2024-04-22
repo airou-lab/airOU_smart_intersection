@@ -25,12 +25,12 @@ class Decider:
         rospy.loginfo("defined velodyne position: %s", static_positions["velodyne"])
 
         # Subsribers: Car Pose, etc.
-        rospy.loginfo("Subscribing...")
         rospy.Subscriber('/car/particle_filter/inferred_pose', PoseStamped, self.car_pose_callback)
+        rospy.loginfo("Subscribed to /car/particle_filter/inferred_pose...")
 
         # Publisher for car to read
-        self.pub_within = rospy.Publisher('/infrastructure/within_intersection', Bool)
-        self.pub_safety = rospy.Publisher('/car/mux/ackermann_cmd_mux/input/safety', AckermannDriveStamped)
+        self.pub_within = rospy.Publisher('/infrastructure/within_intersection', Bool, queue_size=1)
+        self.pub_safety = rospy.Publisher('/car/mux/ackermann_cmd_mux/input/safety', AckermannDriveStamped, queue_size=1)
 
     # Execute when new pose is received
     def car_pose_callback(self, msg: PoseStamped):
