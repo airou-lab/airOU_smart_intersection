@@ -35,9 +35,7 @@ class Decider:
     # Execute when new pose is received
     def car_pose_callback(self, msg: PoseStamped):
         # Print pose information
-        rospy.loginfo(f"received message {msg}")
         point = (msg.pose.position.x, msg.pose.position.y)
-        rospy.loginfo(f"parsed point: {point}")
         
         # Decide if car is contained in intersection
         contains: bool = self.intersection_model.contains(point)
@@ -45,7 +43,10 @@ class Decider:
 
         # Declare stop command
         if (contains):
-            self.stop_car()
+            rospy.loginfo(f"Car contained in intersection!")
+            # self.stop_car()
+        else:
+            rospy.loginfo(f"Car not contained in intersection :(")
     
     def stop_car(self):
         msg = AckermannDriveStamped()

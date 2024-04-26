@@ -4,7 +4,11 @@
 
     <!-- Set ROS_IP for the ARC 2 -->
     <arg name="ros_ip" default="10.42.0.1" />
-    <param name="ROS_IP" value="$(arg ros_ip)" />
+    <param name="ROS_IP" value="$(arg ros_ip)" /> 
+
+    <!-- Start Velodyne object detection -->
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+    <include file="$(find depth_clustering)/launch/test.launch"/>
 
     <!-- Start Decider node -->
     <include file="$(find smart_infrastructure)/launch/includes/decider.launch" />	

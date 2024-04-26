@@ -4,10 +4,10 @@
     <param name="ROS_IP" value="$(arg ros_ip)" />
     
     <!-- Start MuSHR nodes -->
-    <include machine="arc2" file="$(find mushr_base)/launch/teleop.launch"/>
-    <include machine="arc2" file="$(find mushr_base)/launch/includes/map_server.launch" />
+    <include file="$(find mushr_base)/launch/teleop.launch"/>
+    <include file="$(find mushr_base)/launch/includes/map_server.launch" />
 
-    <include machine="arc2"  file="$(find mushr_pf)/launch/real.launch" />
-    <include machine="arc2" file="$(find mushr_rhc)/launch/real.launch" />
-    <include machine="arc2"  file="$(find mushr_gp)/launch/real.launch" />
-</launch>
+    <include file="$(find mushr_pf)/launch/real.launch" />
+    <include file="$(find mushr_rhc)/launch/real.launch" />
+    <include file="$(find mushr_gp)/launch/real.launch" />
+</launch>   
