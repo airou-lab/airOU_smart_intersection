@@ -58,6 +58,15 @@ class Intersection:
     
     def __init__(self, point1: "tuple[float, float]", point3: "tuple[float, float]"): # Corners of square defining the intersection
         self.points: list[tuple[float, float]]= [point1, point3]
+
+        # Make intersection 25% bigger
+        SCALE_FACTOR = 1.25
+        midpoint: tuple[float, float] = (point1 + point3)/2
+        vectorToPoint1 = point1 - midpoint
+        self.points[0] = midpoint + vectorToPoint1*SCALE_FACTOR
+        vectorToPoint3 = point3 - midpoint
+        self.points[1] = midpoint + vectorToPoint3*SCALE_FACTOR
+
         for p in find_other_corners(point1, point3):
             self.points.append(p)
         self.hull = Delaunay(self.points)
