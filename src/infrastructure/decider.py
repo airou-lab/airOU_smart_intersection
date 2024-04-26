@@ -10,8 +10,6 @@ class Decider:
     def __init__(self):
         rospy.init_node('intersection')
 
-        # Intersection box of intersection (x1, y1, x2, y2)
-       
         if(rospy.has_param("/smart_infrastructure/static_positions")):
             rospy.loginfo("Static position config found")
 
@@ -44,7 +42,7 @@ class Decider:
         # Declare stop command
         if (contains):
             rospy.loginfo(f"Car contained in intersection!")
-            # self.stop_car()
+            self.stop_car()
         else:
             rospy.loginfo(f"Car not contained in intersection :(")
     
